@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Robloxalts Web Generator">
+    <meta name="description" content="Robloxalts api generator website" />
+    <title>Robloxalts Web Generator</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="genBox">
+        <h1>Web Generator</h1>
+        <form id="mainForm" name="mainForm">
+            <label for="gkey">API Key</label><br>
+            <input name="gkey" type="text" id="gkey" required readonly> <button id="gkeybtn" type="button"
+                onclick="gkeyButtonSubmit()">Edit key</button><br>
+            <label for="anumber">Generate Amount</label><br>
+            <input name="anumber" type="number" id="anumber" value="1" min="1" required><br>
+            <input id="submitBtn" type="submit" value="Generate">
+            <button id="HOToggle" type="button" onclick="toggleHistoryOutput()">History</button>
+        </form>
+        <br>
+
+        
+        <div id="outputDiv">
+            <h2>OUTPUT</h2>
+            <p id="outputRemaining"></p>
+            <table id="outputTable" class="center">
+                <tbody>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Combination</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="historyDiv" hidden>
+            <h2>HISTORY</h2>
+            <p id="historyTotal">Total: </p>
+            <table id="historyTable" class="center">
+                <tbody>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Combination</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
